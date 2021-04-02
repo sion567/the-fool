@@ -1,0 +1,4 @@
+rootProject.name = 'the-fool'
+
+include 'java-app'
+include 'npm-app'

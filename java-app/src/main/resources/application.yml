@@ -1,0 +1,23 @@
+server:
+  port: 80
+spring:
+  profiles:
+    active: @profileName@
+  cache:
+    type: caffeine
+    caffeine:
+      spec: initialCapacity=50,maximumSize=500,expireAfterWrite=5s,refreshAfterWrite=7s
+  resources:
+    static-locations: classpath:/static/
+  http:
+    encoding:
+      charset: utf-8
+      enabled: true
+    multipart:
+      max-file-size: 10MB
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+
